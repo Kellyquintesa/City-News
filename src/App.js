@@ -1,188 +1,49 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
-import "./App.css";
-import { BiArrowBack } from "react-icons/bi";
+import React from "react";
+import ImageCardLeft from "./components/ImageCardLeft";
+import ImageCardRight from "./components/ImageCardRight";
 
 function App() {
   return (
-    <div
-      className="
-    container
-    mx-auto 
-    h-screen 
-    text-white
-    p-5"
-      style={{ height: "100vh", maxWidth: "390px" }}
-    >
-      <div>
-        <a href="./login">
-          <BiArrowBack />{" "}
-        </a>
-        <br />
-        <span className="text-3xl ">City News</span>
-        {/* main image */}
-        <div className="relative  my-6 grid justify-items-center z-2 ">
-          <div>
-            <img
-              src="images/photo1.jpg"
-              alt="car photo"
-              className="relative w-64 z-1 rounded-2xl mt-[18px] left-[10px]"
-            />
-          </div>
-          <div
-            className="p-[25px]
-      pb-3
-      bg-white
-      rounded-2xl
-      text-black
-      text-sm
-      w-[90%]"
-          >
-            <div>
-              <div>17 Nov</div>
-              <div>Kelly Quintesa</div>
-              <div>
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                lorem ipsum
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* image1 */}
-        <div className="relative  my-6 grid justify-items-end ">
-          <div>
-            <img
-              src="images/photo2.jpg"
-              alt="car photo"
-              className="absolute w-32 rounded-2xl mt-[18px] left-[10px]"
-            />
-          </div>
-          <div
-            className="p-[25px]
-      pb-3
-      bg-white
-      rounded-2xl
-      text-black
-      text-sm
-      w-[90%]"
-          >
-            <div className="ml-[85px]">
-              <div>17 Nov</div>
-              <div>Kelly Quintesa</div>
-              <div>
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                lorem ipsum
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* image 2  */}
-      <div className="relative  my-6 grid justify-items-end ">
-        <div>
+    <div>
+      <div className="container bg-[#2A2E43] max-w-sm h-full p-5 relative">
+        <h1 className="text-white text-5xl pb-10 ">City News</h1>
+        {/* MAIN IMAGE */}
+        <div className="relative">
           <img
-            src="images/photo2.jpg"
-            alt="car photo"
-            className="absolute  w-32 rounded-2xl mt-[18px] right-[10px]"
+            src="/images/photo1.jpg"
+            alt="mainphoto"
+            className="rounded-2xl mb-20 "
           />
-        </div>
-        <div
-          className="p-[25px]
-      pb-3
-      bg-white
-      rounded-2xl
-      text-black
-      text-sm
-      w-[90%]"
-        >
-          <div className="mr-[120px]">
-            <div>17 Nov</div>
-            <div>Kelly Quintesa</div>
-            <div>
-              lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
-              ipsum
-            </div>
+          <div className="absolute border rounded-2xl bg-white top-[200px] w-[90%] left-4 p-4 ">
+            <span>Andree-Ann Labranche</span>
+            <h6 className="text-xs text-slate-400">18 nov</h6>
+            <p className="text-sm text-slate-500">
+              We must believe that we are gifted <br /> for something, and that
+              this thing, at
+            </p>
           </div>
         </div>
-      </div>
+        {/* Image Components */}
+        <ImageCardRight
+          date="17 Nov"
+          name="Adrien Stone"
+          desc="If you're offered a seat on a rocket ship, don't ask what seat! Just get on."
+        />
+        <ImageCardLeft
+          date="16 Nov"
+          name="Bernard Nolan"
+          desc="You can't fall if you don't climb. But there's no joy in living your whole life "
+        />
+        <ImageCardRight
+          date="16 Nov"
+          name="Bernard Nolan"
+          desc="You can't fall if you don't climb. But there's no joy in living your whole life "
+        />
 
-      {/* image3 */}
-      <div className="relative  my-6 grid justify-items-end ">
-        <div>
-          <img
-            src="images/photo2.jpg"
-            alt="car photo"
-            className="absolute w-32 rounded-2xl mt-[18px] left-[10px]"
-          />
-        </div>
-        <div
-          className="p-[25px]
-      pb-3
-      bg-white
-      rounded-2xl
-      text-black
-      text-sm
-      w-[90%]"
-        >
-          <div className="ml-[85px]">
-            <div>17 Nov</div>
-            <div>Kelly Quintesa</div>
-            <div>
-              lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
-              ipsum
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* image4  */}
-      <div
-        className="
-      relative  
-      my-6 
-      grid 
-      justify-items-end "
-      >
-        <div>
-          <img
-            src="images/photo2.jpg"
-            alt="car photo"
-            className="absolute  w-32 rounded-2xl mt-[18px] right-[10px]"
-          />
-        </div>
-        <div
-          className="p-[25px]
-      pb-3
-      bg-white
-      rounded-2xl
-      text-black
-      text-sm
-      w-[90%]"
-        >
-          <div className="mr-[120px]">
-            <div>17 Nov</div>
-            <div>Kelly Quintesa</div>
-            <div>
-              lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
-              ipsum
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* post news button */}
-      <div
-        className="
-        py-[5px] 
-        px-[15] 
-        text-white 
-        bg-blue-600 w-[150px]
-        sticky bottom-[15px] 
-        left-[50%] 
-        rounded-xl 
-        text-center "
-      >
-        POST NEWS
+        <button className="sticky left-full mt-3 bottom-0 py-2 px-5 bg-blue-600 text-white rounded-xl text-sm ">
+          {" "}
+          POST NEWS
+        </button>
       </div>
     </div>
   );
